@@ -7490,6 +7490,8 @@ select * from katalog where naslov like '%odi%';
 insert into autor (sifra,ime ,prezime ,datumrodenja ) values
 (6666,'Darko','Luketic','1981-09-28');
 
+
+select * from 
 select * from autor where ime ='Darko';
 
 insert into izdavac (sifra ,naziv) values
@@ -7502,5 +7504,14 @@ insert into katalog (sifra, naslov, autor, izdavac,mjesto) values (6666, 'Vodič
 
 select * from katalog where sifra=6666;
 
+select * from katalog where naslov like '%mr%';
 
+update katalog set naslov='Mali dabar seta sumom' where sifra=3185;
+select * from katalog where sifra=3185;
+
+select * from mjesto where naziv ='Osijek';
+
+update mjesto set naziv ='Legograd' where postanskiBroj =3100;
+
+select * from mjesto where postanskiBroj =3100;
 
