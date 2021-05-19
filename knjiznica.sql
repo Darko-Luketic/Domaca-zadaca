@@ -7521,6 +7521,12 @@ select * from katalog where autor=16911;
 update katalog set naslov='Ubiše se bezveze' where sifra=3136;
 select * from katalog where autor=16911;
 
+select * from katalog where sifra>=2676 and sifra<=3000;
+update katalog set naslov='Purgergrad' where sifra=2989;
+select * from katalog where autor=15276;
+select * from katalog where autor>=15000 and autor<15300;
+update katalog set naslov='Mijenjam 2 naslova' where autor=15235;
+update katalog set naslov='Špigl' where sifra=2922;
 
 
 
