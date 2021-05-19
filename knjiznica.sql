@@ -7515,3 +7515,12 @@ update mjesto set naziv ='Legograd' where postanskiBroj =3100;
 
 select * from mjesto where postanskiBroj =3100;
 
+select * from katalog where naslov like '%omeo%';
+select * from autor where sifra=16911;
+select * from katalog where autor=16911;
+update katalog set naslov='Ubiše se bezveze' where sifra=3136;
+select * from katalog where autor=16911;
+
+
+
+
