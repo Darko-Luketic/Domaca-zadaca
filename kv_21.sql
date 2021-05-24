@@ -94,7 +94,7 @@ alter table djevojka add foreign key (mladic) references mladic(sifra);
 insert into brat (prviputa ,hlace ,stilfrizura ) values
 ('2020-02-02','crna','crna'),('2020-02-02','crna','crna'),('2020-02-02','crna','crna');
 insert into zena(kuna ,asocijalno ) values
-(100,true),(100,true),(100,true);
+(100,true),(100,true),(100,true),(200,false),(300,true);
 insert into zena_brat (zena ,brat ) values
 (1,1),(2,2),(3,3);
 insert into cura(nausnica ,dukserica ,stilfrizura ,zena ) values
@@ -109,6 +109,9 @@ update djevojka set maraka =15.74;
 
 #3. U tablici svekrva obrišite sve zapise čija je vrijednost kolone jmbag 
 #00000000007. (4)
+insert into svekrva (gustoca ,ostavljen,jmbag ) values
+(100,2,''),(200,1,null),(3,2,'00000000007'),(1,2,12345678910);
+select * from svekrva;
 
 delete from svekrva where jmbag =00000000007;
 
@@ -133,6 +136,7 @@ order by o.ekstroventno desc;
 
 #6. Prikažite kolone drugiputa i asocijalno iz tablice zena čiji se 
 #primarni ključ ne nalaze u tablici zena_brat. (5
+
 
 select z.drugiputa,z.asocijalno from zena z
 left join zena_brat zm on zm.zena =z.sifra 
